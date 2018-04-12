@@ -19,5 +19,6 @@
 |Security|https://blog.zeppelin.solutions/onward-with-ethereum-smart-contract-security-97a827e47702|
 |Upgradable Contract| https://medium.com/aigang-network/upgradable-smart-contracts-what-weve-learned-at-aigang-b181d3d4b668|
 |Transfer ETH Web UI|https://medium.com/metamask/calling-a-smart-contract-with-a-button-d278b1e76705|
+|Debugging|http://truffleframework.com/tutorials/debugging-a-smart-contract|
 
 
