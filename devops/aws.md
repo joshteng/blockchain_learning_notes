@@ -1,0 +1,1 @@
+https://livevideo.manning.com/course/16/aws-in-motion
