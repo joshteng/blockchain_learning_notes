@@ -42,6 +42,7 @@ else:
 
 ### What I dislike about Django compared to Rails
 1. Default authentication feels rigid (still need to explore more). And I don't prefer that it generates an `auth_user` table with default (some required and some optional) fields and a permission system for me if I use `django.contrib.auth` / `django.contrib.admin` app(s).
+This potentially solves it https://code.djangoproject.com/wiki/ContribEmailAuth
 Questions:
     1. How does it affect my ability to create very customized sign up flows (e.g. username is compulsory, potentially delay creation or fake username first)
 2. Ruby as a language and community has a default dependency manager, Bundler. In Rails, Gemfiles are auto generated. Hence, the way you manage dependencies are a default. In Django, however, there isn't a default (because of Python). Heroku recommends using Pipenv, which is fine but when you generate a new Django project, it doesn't generate a Pipfile for you automatically. This non-default requires dev teams to enforce a standard for all devs to use Pipenv to install new dependencies.
