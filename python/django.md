@@ -46,6 +46,7 @@ Questions:
 2. Ruby as a language and community has a default dependency manager, Bundler. In Rails, Gemfiles are auto generated. Hence, the way you manage dependencies are a default. In Django, however, there isn't a default (because of Python). Heroku recommends using Pipenv, which is fine but when you generate a new Django project, it doesn't generate a Pipfile for you automatically. This non-default requires dev teams to enforce a standard for all devs to use Pipenv to install new dependencies.
 3. While it can be an advantage, the fact that Django doesn't help with asset (CSS, JS) concatenation, minification is also a bit annoying. (Not sure how caching is affected. In Rails, all assets are concatenated, minified and versioned). https://stackoverflow.com/questions/34586114/whats-the-point-of-djangos-collectstatic
 https://devcenter.heroku.com/articles/django-assets
+See `django-compressor`
 
 4. The way you use access environment variables by default in Django / Python `os.environ.get('NAME',3)` is very verbose compared to Rails' `ENV[:NAME]`. (we can override default but not a good idea to not follow the framework's conventions)
 5. It has a single entry `settings` entry point for all environments by default rather than it being like Rails. In a self-managed production environment, gotta be careful with settings like `DEBUG`, `SECRET_KEY`
