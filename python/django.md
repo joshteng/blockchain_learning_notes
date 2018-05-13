@@ -15,6 +15,7 @@ https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv
 **Using env way:**
 https://godjango.com/blog/working-with-environment-variables-in-python/
 https://github.com/joke2k/django-environ (don't think this is a good idea, it breaks conventional style, making deployment difficult without fully following this)
+Or see `python-dotenv`
 **Using separate settings file (still use env variables to prevent secret keys being committed into Git!)**
 https://docs.djangoproject.com/en/20/topics/settings/#designating-the-settings
 https://thinkster.io/tutorials/configuring-django-settings-for-production
