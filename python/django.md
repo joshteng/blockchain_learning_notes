@@ -46,7 +46,7 @@ This potentially solves it https://code.djangoproject.com/wiki/ContribEmailAuth
 Questions:
     1. How does it affect my ability to create very customized sign up flows (e.g. username is compulsory, potentially delay creation or fake username first)
 2. Ruby as a language and community has a default dependency manager, Bundler. In Rails, Gemfiles are auto generated. Hence, the way you manage dependencies are a default. In Django, however, there isn't a default (because of Python). Heroku recommends using Pipenv, which is fine but when you generate a new Django project, it doesn't generate a Pipfile for you automatically. This non-default requires dev teams to enforce a standard for all devs to use Pipenv to install new dependencies.
-3. While it can be an advantage, the fact that Django doesn't help with asset (CSS, JS) concatenation, minification is also a bit annoying. (Not sure how caching is affected. In Rails, all assets are concatenated, minified and versioned). https://stackoverflow.com/questions/34586114/whats-the-point-of-djangos-collectstatic
+3. While it can be an advantage, the fact that Django doesn't help with asset (CSS, JS) concatenation, minification is also a bit annoying. (bear in mind versioning for how caching. In Rails, all assets are concatenated, minified and versioned). https://stackoverflow.com/questions/34586114/whats-the-point-of-djangos-collectstatic
 https://devcenter.heroku.com/articles/django-assets
 See `django-compressor`
 
