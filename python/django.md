@@ -41,22 +41,33 @@ else:
 6. Because of how Django is more explicit, it would be easier to onboard an engineer onto an existing project
 
 ### What I dislike about Django compared to Rails
-1. Default authentication feels rigid (still need to explore more). And I don't prefer that it generates an `auth_user` table with default (some required and some optional) fields and a permission system for me if I use `django.contrib.auth` / `django.contrib.admin` app(s).
-This potentially solves it https://code.djangoproject.com/wiki/ContribEmailAuth
+1. Default authentication feels rigid (still need to explore more). And I don't prefer that it generates an `auth_user` table with default (some required and some optional) fields/columns and a permission (authorization) system for me with `django.contrib.auth` / `django.contrib.admin` app(s).
+Solution: https://code.djangoproject.com/wiki/ContribEmailAuth
 Questions:
     1. How does it affect my ability to create very customized sign up flows (e.g. username is compulsory, potentially delay creation or fake username first)
 2. Ruby as a language and community has a default dependency manager, Bundler. In Rails, Gemfiles are auto generated. Hence, the way you manage dependencies are a default. In Django, however, there isn't a default (because of Python). Heroku recommends using Pipenv, which is fine but when you generate a new Django project, it doesn't generate a Pipfile for you automatically. This non-default requires dev teams to enforce a standard for all devs to use Pipenv to install new dependencies.
+Solution: Pipenv
 3. While it can be an advantage, the fact that Django doesn't help with asset (CSS, JS) concatenation, minification is also a bit annoying. (bear in mind versioning for how caching. In Rails, all assets are concatenated, minified and versioned). https://stackoverflow.com/questions/34586114/whats-the-point-of-djangos-collectstatic
 https://devcenter.heroku.com/articles/django-assets
-See `django-compressor`
+Solution: `django-compressor`
 
 4. The way you use access environment variables by default in Django / Python `os.environ.get('NAME',3)` is very verbose compared to Rails' `ENV[:NAME]`. (we can override default but not a good idea to not follow the framework's conventions)
+Solution: Deal with it
 5. It has a single entry `settings` entry point for all environments by default rather than it being like Rails. In a self-managed production environment, gotta be careful with settings like `DEBUG`, `SECRET_KEY`
 https://docs.djangoproject.com/en/2.0/topics/settings/#designating-the-settings
+Solution: https://thinkster.io/tutorials/configuring-django-settings-for-production + `python-dotenv`
 6. Static assets are not served in production automatically
+Solution:
+    1. Change the settings
+    2. Configure web server to serve from the folder
+    3. Deploy static files to something like S3 or Cloud Storage and caching it with CDN (do it part of devops automation)
 7. You gotta import modules manually unlike Rails
+Solution: Deal with it
 8. Default templating language sucks
-http://jinja.pocoo.org/docs/2.10/faq/#how-compatible-is-jinja2-with-django
+Solution: http://jinja.pocoo.org/docs/2.10/faq/#how-compatible-is-jinja2-with-django
 9. Structuring code needs more thinking. For e.g. Need to make upfront decisions about where models should go to if they are shared across `apps` within the project
+Solution: Start building and get more experience with it
 10. 3rd party dependencies are not as well updated, which potentially causes security, missed performance, and updating issues
+Solution: Wait and see
 11. `URLConfig` or Django's routes system doesn't differentiate different HTTP methods (GET, POST etc+) instead enforcing them on `views` (or controller in Rails) level via decorators. This maybe be a stylistic preference but it doesn't make available endpoints and their corresponding HTTP methods immediately obvious.
+Solution: Stick with convention and have the whole team understand the convention and have a separate documentation that list all endpoints
