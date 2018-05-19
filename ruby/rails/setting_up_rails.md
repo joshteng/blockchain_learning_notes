@@ -1,5 +1,5 @@
 1. Use credentials API
-     1. Change `production.rb` to require MASTER_KEY
+     1. Change `production.rb` to require RAILS_MASTER_KEY
      2. Find a way to manage environment keys across environments easily
         Option 1 > https://github.com/freeletics/creds
 2. Use Yard for documentation
