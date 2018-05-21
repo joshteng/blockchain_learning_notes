@@ -7,13 +7,13 @@ If you are already good with fundamentals as well as ES6/7 syntax, you can go ah
 
 Here are some questions you should be able to answer
 
-- Why Javascript? what is it good for? how is it different than other programming language? 
+- Why Javascript? what is it good for? how is it different than other programming language?
 - what’s the programming paradigm for JS?
 - data types: primitive, object
 - equality vs strict equality
 - what hoisting is
-- the implication of using various variable declaration var, const, let. 
-- the difference between function declaration and expression and the implication of each. 
+- the implication of using various variable declaration var, const, let.
+- the difference between function declaration and expression and the implication of each.
 - anonymous functions and immediately invoked function expressions (iffe)
 - function vs block scoping
 - lexical binding vs dynamic binding
@@ -44,3 +44,7 @@ Here are some questions you should be able to answer
 I recommend using a Node.js environment to learn before using the browser. When using browser, some newer JS syntax will require the use of a transpiler like Babel or https://babeljs.io/repl/
 
 Always use the latest version of node. You can manage multiple node versions on your computer with `NVM`
+
+---
+## Documentation Cheatsheet
+http://usejsdoc.org/tags-type.html
