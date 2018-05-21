@@ -2,6 +2,7 @@
      1. Change `production.rb` to require RAILS_MASTER_KEY
      2. Find a way to manage environment keys across environments easily
         Option 1 > https://github.com/freeletics/creds
+     3. Remember to add master keys into .gitignore
 2. Use Yard for documentation
     1. Install Yard by including gem 'yard' in `Gemfile` (development only)
       ```
