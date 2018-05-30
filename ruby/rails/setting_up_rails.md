@@ -26,3 +26,5 @@
       'format_bare'               => 'false',
       'format_rdoc'               => 'true',
       ```
+4. Use RSPEC. Include `rspec-rails` gem.
+`rails new <name> --skip-test-unit -d postgresql --api`
